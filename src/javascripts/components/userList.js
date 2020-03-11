@@ -5,4 +5,4 @@ const createUserList = (messages) => {
   messages.forEach((message) => {
     const messageUsers = users.find((x) => x.id === message.userId);
   });
-}
+};
