@@ -1,5 +1,6 @@
 import message from '../helpers/data/messageData';
 import utils from '../helpers/utils';
+
 const messageBuilder = () => {
   let domString = '';
   const textInfo = message.getMessages();
