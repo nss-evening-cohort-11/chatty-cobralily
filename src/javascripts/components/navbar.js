@@ -3,7 +3,7 @@ import utils from '../helpers/utils';
 
 const buildNavbar = () => {
   let domString = '';
-  domString += '<div>'
+  domString += '<div>';
   domString += '<nav class="navbar navbar-expand-lg navbar-light bg-light">';
   domString += '<a class="navbar-brand" href="#">Navbar</a>';
   domString += '<form class="form-inline my-2 my-lg-0">';
