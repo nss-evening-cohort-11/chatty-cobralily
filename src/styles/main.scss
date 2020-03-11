@@ -5,3 +5,10 @@
 body {
   background-color: green;
 }
+
+#userRadioBtnContainer{
+  display: flex;
+  justify-content: space-around;
+  height: 40px;
+  background-color: #f8f9fa;
+}
