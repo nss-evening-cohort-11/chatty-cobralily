@@ -1,8 +1,15 @@
 import userData from '../helpers/data/userData';
 
-const createUserList = (messages) => {
+
+const createUserList = () => {
   const users = userData.getUsers();
-  messages.forEach((message) => {
-    const messageUsers = users.find((x) => x.id === message.userId);
+  let domString = '<h5>';
+  users.forEach((user) => {
+    const messageUsers = users.find((x) => x.id === user.id);
+    domString += messageUsers.name;
   });
+  domString += '</h5>';
+  return domString;
 };
+
+export default { createUserList };
