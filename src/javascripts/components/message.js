@@ -17,4 +17,11 @@ const messageBuilder = () => {
   utils.printToDom('messageContainer', domString);
 };
 
-export default { messageBuilder };
+const clearBtnFunction = (e) => {
+  e.preventDefault();
+  const messages = message.getMessages();
+  messages.splice(0, messages.length);
+  messageBuilder(messages);
+};
+
+export default { messageBuilder, clearBtnFunction };
