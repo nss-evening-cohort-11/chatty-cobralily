@@ -1,15 +1,10 @@
+import moment from 'moment';
 import utils from '../../helpers/utils';
 import messageData from '../../helpers/data/messageData';
-import message from '../message';
+import message from '../message/message';
 import './navbar.scss';
-
-const clearLog = (e) => {
-  e.preventDefault();
-  const messages = messageData.getMessages();
-  messages.splice(0, messages.length);
-  message.messageBuilder(messages);
-  console.error('clearbutton');
-};
+// import radio from '../radio';
+import userData from '../../helpers/data/userData';
 
 const buildNavbar = () => {
   let domString = '';
@@ -27,17 +22,20 @@ const buildNavbar = () => {
     if (e.keyCode === 13) {
       e.preventDefault();
       const messages = messageData.getMessages();
-      const newMessage = {
-        id: `message${messages.length + 1}`,
-        message: $('#message-field').val(),
-        timeStamp: Date.now(),
-      };
-      messages.push(newMessage);
-      $('form').trigger('reset');
-      message.messageBuilder(messages);
+      if (messages.length <= 19) {
+        const newMessage = {
+          id: `message${messages.length + 1}`,
+          message: $('#message-field').val(),
+          timeStamp: moment().format('MMM Do YY'),
+          userId: userData.setSelectedUser(),
+        };
+        messages.push(newMessage);
+        $('form').trigger('reset');
+        message.messageBuilder(messages);
+        console.error(messages);
+      } else (document.write('Too many messages'));
     }
   });
-  $('#clear-log-button').on('click', clearLog);
 };
 
 export default { buildNavbar };

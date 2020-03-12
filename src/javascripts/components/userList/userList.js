@@ -1,5 +1,4 @@
-import userData from '../helpers/data/userData';
-
+import userData from '../../helpers/data/userData';
 
 const createUserList = () => {
   const users = userData.getUsers();

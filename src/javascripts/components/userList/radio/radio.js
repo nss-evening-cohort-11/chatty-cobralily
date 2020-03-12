@@ -1,5 +1,10 @@
-import userData from '../helpers/data/userData';
-import utils from '../helpers/utils';
+import userData from '../../../helpers/data/userData';
+import utils from '../../../helpers/utils';
+
+const selectedUser = (e) => {
+  const userId = e.target.id;
+  userData.setSelectedUser(userId);
+};
 
 const buildRadioButtons = () => {
   const allUsers = userData.getUsers();
@@ -11,6 +16,7 @@ const buildRadioButtons = () => {
     domString += '</div>';
   });
   utils.printToDom('userRadioBtnContainer', domString);
+  $('body').on('click', '.userRadio', selectedUser);
 };
 
-export default { buildRadioButtons };
+export default { buildRadioButtons, selectedUser };
