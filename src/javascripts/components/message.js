@@ -5,16 +5,26 @@ const messageBuilder = () => {
   let domString = '';
   const textInfo = message.getMessages();
   textInfo.forEach((text) => {
-    domString += '<div class="bg-white border-top row w-75 mx-auto m-1 p-2">';
-    domString += '<div>';
+    domString += '<div id="message" class="message bg-white border-top row w-75 mx-auto m-1 p-2">';
+    domString += '<div class="col-10">';
     domString += '<h5>Name Example</h5>';
-    domString += '</div>';
-    domString += '<div class="ml-3">';
+    domString += '<div>';
     domString += `<p>${text.message}</p>`;
+    domString += '</div>';
+    domString += '</div>';
+    domString += '<div>';
+    domString += `<button id="${text.id}" class="deleteBtn btn btn-danger">Delete <i class="fas fa-minus-circle"></i></button>`;
     domString += '</div>';
     domString += '</div>';
   });
   utils.printToDom('messageContainer', domString);
+  const deleteMessageEvent = (e) => {
+    const deleteId = e.target.id;
+    const textPosition = textInfo.findIndex((p) => p.id === deleteId);
+    textInfo.splice(textPosition, 1);
+    messageBuilder();
+  };
+  $('.deleteBtn').click(deleteMessageEvent);
 };
 
 const clearBtnFunction = (e) => {
