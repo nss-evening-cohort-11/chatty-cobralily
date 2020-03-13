@@ -19,12 +19,10 @@ const messageBuilder = () => {
   });
   utils.printToDom('messageContainer', domString);
   const deleteMessageEvent = (e) => {
-    textInfo.forEach((deleteText) => {
-      const deleteId = e.target.closest('.message').id;
-      const textPosition = deleteText.findIndex((p) => p.id === deleteId);
-      deleteText.splice(textPosition, 1);
-      messageBuilder(deleteText);
-    });
+    const deleteId = e.target.id;
+    const textPosition = textInfo.findIndex((p) => p.id === deleteId);
+    textInfo.splice(textPosition, 1);
+    messageBuilder();
   };
   $('.deleteBtn').click(deleteMessageEvent);
 };
