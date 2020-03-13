@@ -28,4 +28,5 @@ const messages = [
 
 const getMessages = () => messages;
 
+
 export default { getMessages };
