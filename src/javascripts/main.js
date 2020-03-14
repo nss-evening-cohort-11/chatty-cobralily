@@ -11,6 +11,7 @@ const init = () => {
   navbar.buildNavbar();
   messages.messageBuilder();
   $('body').on('click', '#clear-all-button', messages.clearBtnFunction);
+  $('body').on('click', '#submit-message-button', navbar.addMessageBtn);
 };
 
 init();
