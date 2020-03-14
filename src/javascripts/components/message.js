@@ -10,6 +10,7 @@ const messageBuilder = () => {
     domString += '<h5>Name Example</h5>';
     domString += '<div>';
     domString += `<p>${text.message}</p>`;
+    domString += `<p>${text.timeStamp}</p>`;
     domString += '</div>';
     domString += '</div>';
     domString += '<div>';
