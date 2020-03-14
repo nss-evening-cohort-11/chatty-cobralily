@@ -9,7 +9,6 @@ let selectedUserId = '';
 
 const setSelectedUser = (userId) => {
   selectedUserId = userId;
-  console.error(selectedUserId);
 };
 
 const getSelectedUser = () => selectedUserId;
