@@ -1,5 +1,5 @@
-import userData from '../helpers/data/userData';
-import utils from '../helpers/utils';
+import userData from '../../helpers/data/userData';
+import utils from '../../helpers/utils';
 
 const selectedUser = (e) => {
   const userId = e.target.id;
