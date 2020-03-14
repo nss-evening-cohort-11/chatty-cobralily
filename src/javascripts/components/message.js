@@ -18,6 +18,16 @@ const messageBuilder = () => {
     domString += '</div>';
   });
   utils.printToDom('messageContainer', domString);
+  const amountOfMessages = (e) => {
+    if (textInfo.lenth <= 20) {
+      console.error('setup working');
+      e.preventDefault();
+    } else {
+      console.error(textInfo);
+    }
+  };
+  amountOfMessages();
+
   const deleteMessageEvent = (e) => {
     const deleteId = e.target.id;
     const textPosition = textInfo.findIndex((p) => p.id === deleteId);

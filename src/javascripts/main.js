@@ -9,6 +9,7 @@ const init = () => {
   radio.buildRadioButtons(userData.getUsers);
   navbar.buildNavbar();
   messages.messageBuilder();
+  // messages.amountOfMessages();
   $('body').on('click', '#clear-all-button', messages.clearBtnFunction);
 };
 
