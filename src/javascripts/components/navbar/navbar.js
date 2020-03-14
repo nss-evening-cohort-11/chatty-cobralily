@@ -1,9 +1,9 @@
 import moment from 'moment';
-import utils from '../helpers/utils';
-import messageData from '../helpers/data/messageData';
-import message from './message';
+import utils from '../../helpers/utils';
+import messageData from '../../helpers/data/messageData';
+import message from '../message/message';
 // import radio from '../radio';
-import userData from '../helpers/data/userData';
+import userData from '../../helpers/data/userData';
 
 
 const buildNavbar = () => {
@@ -26,7 +26,7 @@ const buildNavbar = () => {
         const newMessage = {
           id: `message${messages.length + 1}`,
           message: $('#message-field').val(),
-          timeStamp: moment().format('MMM Do YY'),
+          timeStamp: moment().format('MMM Do YYYY h:mm a'),
           userId: userData.setSelectedUser(),
         };
         messages.push(newMessage);
