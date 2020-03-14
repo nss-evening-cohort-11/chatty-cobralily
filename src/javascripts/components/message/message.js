@@ -1,5 +1,5 @@
-import message from '../helpers/data/messageData';
-import utils from '../helpers/utils';
+import message from '../../helpers/data/messageData';
+import utils from '../../helpers/utils';
 
 const messageBuilder = () => {
   let domString = '';
@@ -29,6 +29,7 @@ const messageBuilder = () => {
 };
 
 const clearBtnFunction = (e) => {
+  console.error('clicked clear');
   e.preventDefault();
   const messages = message.getMessages();
   messages.splice(0, messages.length);
