@@ -1,3 +1,4 @@
+import moment from 'moment';
 import utils from '../../helpers/utils';
 import messageData from '../../helpers/data/messageData';
 import message from '../message/message';
@@ -26,7 +27,7 @@ const buildNavbar = () => {
           id: `message${messages.length + 1}`,
           message: $('#message-field').val(),
           timeStamp: moment().format('MMM Do YY'),
-          userId: userData.setSelectedUser(),
+          userId: userData.getSelectedUser(),
         };
         messages.push(newMessage);
         $('form').trigger('reset');
@@ -35,6 +36,5 @@ const buildNavbar = () => {
     }
   });
 };
-
 
 export default { buildNavbar };

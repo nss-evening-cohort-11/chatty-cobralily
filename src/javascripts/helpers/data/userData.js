@@ -5,11 +5,15 @@ const users = [
   { id: 'user4', name: 'Zac' },
 ];
 
+let selectedUserId = '';
+
 const setSelectedUser = (userId) => {
-  const selectedUserId = userId;
+  selectedUserId = userId;
   console.error(selectedUserId);
 };
 
+const getSelectedUser = () => selectedUserId;
+
 const getUsers = () => users;
 
-export default { getUsers, setSelectedUser };
+export default { getUsers, setSelectedUser, getSelectedUser };

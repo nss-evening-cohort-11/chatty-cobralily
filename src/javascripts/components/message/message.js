@@ -1,5 +1,6 @@
 import message from '../../helpers/data/messageData';
 import utils from '../../helpers/utils';
+import userList from '../userList/userList';
 
 const messageBuilder = () => {
   let domString = '';
@@ -7,9 +8,10 @@ const messageBuilder = () => {
   textInfo.forEach((text) => {
     domString += '<div id="message" class="message bg-white border-top row w-75 mx-auto m-1 p-2">';
     domString += '<div class="col-10">';
-    domString += '<h5>Name Example</h5>';
+    domString += userList.createUserList(text.userId);
     domString += '<div>';
     domString += `<p>${text.message}</p>`;
+    domString += `<p>${text.timeStamp}</p>`;
     domString += '</div>';
     domString += '</div>';
     domString += '<div>';
