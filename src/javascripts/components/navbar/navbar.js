@@ -25,7 +25,7 @@ const buildNavbar = () => {
         const newMessage = {
           id: `message${messages.length + 1}`,
           message: $('#message-field').val(),
-          timeStamp: moment().format('MMM Do YY'),
+          timeStamp: moment().format('MMMM Do YYYY, h:mm a'),
           userId: userData.getSelectedUser(),
         };
         messages.push(newMessage);
