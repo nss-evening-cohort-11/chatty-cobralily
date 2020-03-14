@@ -26,8 +26,8 @@ const buildNavbar = () => {
         const newMessage = {
           id: `message${messages.length + 1}`,
           message: $('#message-field').val(),
-          timeStamp: moment().format('MMM Do YYYY h:mm a'),
-          userId: userData.setSelectedUser(),
+          timeStamp: moment().format('MMM Do YY'),
+          userId: userData.getSelectedUser(),
         };
         messages.push(newMessage);
         $('form').trigger('reset');
@@ -36,6 +36,5 @@ const buildNavbar = () => {
     }
   });
 };
-
 
 export default { buildNavbar };
