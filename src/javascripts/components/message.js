@@ -38,6 +38,7 @@ const messageBuilder = () => {
 };
 
 const clearBtnFunction = (e) => {
+  console.error('clicked clear');
   e.preventDefault();
   const messages = message.getMessages();
   messages.splice(0, messages.length);
