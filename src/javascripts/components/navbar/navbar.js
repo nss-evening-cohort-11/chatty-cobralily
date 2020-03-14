@@ -2,9 +2,7 @@ import moment from 'moment';
 import utils from '../../helpers/utils';
 import messageData from '../../helpers/data/messageData';
 import message from '../message/message';
-// import radio from '../radio';
 import userData from '../../helpers/data/userData';
-
 
 const buildNavbar = () => {
   let domString = '';
