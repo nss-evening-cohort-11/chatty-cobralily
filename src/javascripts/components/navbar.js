@@ -13,8 +13,8 @@ const buildNavbar = () => {
   domString += '<a class="navbar-brand" href="#">Chatty!</a>';
   domString += '<form class="form-inline my-2 my-lg-0 w-75">';
   domString += '<input class="form-control mr-sm-2" type="text" id="message-field" placeholder="Enter message" aria-label="Search">';
-  domString += '<button class="btn btn-outline-success my-2 my-sm-0" id="clear-log-button">Clear</button>';
   domString += '</form>';
+  domString += '<button class="btn btn-outline-success my-2 my-sm-0" id="clear-all-button">Clear</button>';
   domString += '</nav>';
   domString += '</div>';
   utils.printToDom('nav', domString);
@@ -32,7 +32,6 @@ const buildNavbar = () => {
         messages.push(newMessage);
         $('form').trigger('reset');
         message.messageBuilder(messages);
-        console.error(messages);
       } else (document.write('Too many messages'));
     }
   });
