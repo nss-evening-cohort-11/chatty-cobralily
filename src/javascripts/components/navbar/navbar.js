@@ -14,14 +14,14 @@ const buildNavbar = () => {
   domString += '<form class="form-inline my-2 my-lg-0 w-75">';
   domString += '<input class="form-control mr-sm-2" type="text" id="message-field" placeholder="Enter message" aria-label="Search">';
   domString += '</form>';
-  domString += '<button class="btn btn-outline-success my-2 my-sm-0" id="dark-mode">Dark Theme</button>';
+  domString += '<button class="btn btn-outline-success my-2 my-sm-0 dark-theme" id="dark-mode">Dark Theme</button>';
   domString += '<button class="btn btn-outline-success my-2 my-sm-0" id="clear-all-button">Clear</button>';
   domString += '</nav>';
   domString += '</div>';
   utils.printToDom('nav', domString);
   $(document).ready(() => {
-    $('#dark-mode').click(() => {
-      $('body').css('background-color', 'black');
+    $('.dark-theme').click(() => {
+      $('body').toggleClass('black');
     });
   });
   $('#message-field').keypress((e) => {
