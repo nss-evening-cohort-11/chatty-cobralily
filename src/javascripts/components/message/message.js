@@ -1,6 +1,7 @@
 import message from '../../helpers/data/messageData';
 import utils from '../../helpers/utils';
 import userList from '../userList/userList';
+import buttons from '../buttons/buttons';
 
 const messageBuilder = () => {
   let domString = '';
@@ -20,6 +21,7 @@ const messageBuilder = () => {
     domString += '</div>';
   });
   utils.printToDom('messageContainer', domString);
+  buttons.settings();
   const deleteMessageEvent = (e) => {
     const deleteId = e.target.id;
     const textPosition = textInfo.findIndex((p) => p.id === deleteId);

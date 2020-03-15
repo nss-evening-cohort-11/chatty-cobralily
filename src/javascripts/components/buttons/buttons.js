@@ -1,5 +1,11 @@
 import utils from '../../helpers/utils';
 
+const fontIncrease = () => {
+  $('.fontIncrease').css({ 'font-size': '200%' });
+};
+const font = () => {
+  $('.standard').css({ 'font-size': '' });
+};
 
 const settings = () => {
   let domString = '';
@@ -13,12 +19,6 @@ const settings = () => {
   domString += '</div>';
   domString += '</div>';
   utils.printToDom('settings', domString);
-  const fontIncrease = () => {
-    $('.fontIncrease').css({ 'font-size': '200%' });
-  };
-  const font = () => {
-    $('.standard').css({ 'font-size': '' });
-  };
   $('#largeText').click(fontIncrease);
   $('#standardText').click(font);
 };
