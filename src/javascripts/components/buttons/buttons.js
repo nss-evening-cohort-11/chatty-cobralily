@@ -39,6 +39,8 @@ $(document).ready(() => {
     $('col').css('border-color', 'black');
     $('button').css('background-color', 'black');
     $('button').css('color', 'white');
+    $('border').css('background-color', 'black');
+    $('border').css('color', 'white');
   });
 });
 $(document).ready(() => {
@@ -56,6 +58,8 @@ $(document).ready(() => {
     $('col').css('border-color', '');
     $('button').css('background-color', '');
     $('button').css('color', '');
+    $('border').css('background-color', '');
+    $('border').css('color', '');
   });
 });
 export default { settings };
