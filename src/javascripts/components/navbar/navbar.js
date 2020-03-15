@@ -14,10 +14,16 @@ const buildNavbar = () => {
   domString += '<form class="form-inline my-2 my-lg-0 w-75">';
   domString += '<input class="form-control mr-sm-2" type="text" id="message-field" placeholder="Enter message" aria-label="Search">';
   domString += '</form>';
+  domString += '<button class="btn btn-outline-success my-2 my-sm-0" id="dark-mode">Dark Theme</button>';
   domString += '<button class="btn btn-outline-success my-2 my-sm-0" id="clear-all-button">Clear</button>';
   domString += '</nav>';
   domString += '</div>';
   utils.printToDom('nav', domString);
+  $(document).ready(() => {
+    $('#dark-mode').click(() => {
+      $('body').css('background-color', 'black');
+    });
+  });
   $('#message-field').keypress((e) => {
     if (e.keyCode === 13) {
       e.preventDefault();
@@ -26,7 +32,7 @@ const buildNavbar = () => {
         const newMessage = {
           id: `message${messages.length + 1}`,
           message: $('#message-field').val(),
-          timeStamp: moment().format('MMM Do YY'),
+          timeStamp: moment().format('MMM Do YYYY'),
           userId: userData.getSelectedUser(),
         };
         messages.push(newMessage);
@@ -36,5 +42,6 @@ const buildNavbar = () => {
     }
   });
 };
+
 
 export default { buildNavbar };
