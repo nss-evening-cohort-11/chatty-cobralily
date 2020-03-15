@@ -10,7 +10,7 @@ const messageBuilder = () => {
     domString += '<div class="col-10">';
     domString += userList.createUserList(text.userId);
     domString += '<div>';
-    domString += `<p class='fontIncrease'>${text.message}</p>`;
+    domString += `<p class='fontIncrease standard'>${text.message}</p>`;
     domString += `<p>${text.timeStamp}</p>`;
     domString += '</div>';
     domString += '</div>';
@@ -30,7 +30,6 @@ const messageBuilder = () => {
 };
 
 const clearBtnFunction = (e) => {
-  console.error('clicked clear');
   e.preventDefault();
   const messages = message.getMessages();
   messages.splice(0, messages.length);
