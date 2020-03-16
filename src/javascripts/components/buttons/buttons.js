@@ -35,7 +35,7 @@ const settings = () => {
     $('#userRadioBtnContainer').addClass('bg-dark');
     $('label').css('color', 'white');
     $('.dropdown-menu').css('background-color', 'black');
-    $('.dropdown-item').css('color', 'white');
+    $('.dropdown-item').css('color', 'slategrey');
     $('col').css('background-color', 'black');
     $('col').css('color', 'white');
     $('col').css('border-color', 'black');
@@ -43,6 +43,7 @@ const settings = () => {
     $('#clear-all-button').addClass('btn-danger');
     $('#themeSelectorBtns').removeClass('btn-primary');
     $('#themeSelectorBtns').addClass('btn-danger');
+    $('#themeSelectorBtns').css('border', '0px');
     $('button').css('color', 'white');
     $('.message').removeClass('bg-white');
     $('.message').css('background-color', 'slategrey');
@@ -63,6 +64,7 @@ const settings = () => {
     $('#settings').addClass('bg-light');
     $('#userRadioBtnContainer').removeClass('bg-dark');
     $('#userRadioBtnContainer').addClass('bg-light');
+    $('label').css('color', '');
     $('.dropdown-item').css('color', 'black');
     $('div').css('background-color', '');
     $('div').css('color', '');
@@ -73,6 +75,7 @@ const settings = () => {
     $('#clear-all-button').addClass('btn-primary');
     $('#themeSelectorBtns').removeClass('btn-danger');
     $('#themeSelectorBtns').addClass('btn-primary');
+    $('#themeSelectorBtns').css('border', '0px');
     $('button').css('color', '');
     $('.message').addClass('bg-white');
     $('.message').css('color', '');
