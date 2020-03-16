@@ -12,16 +12,10 @@ const requestGifs = () => {
     .then((results) => {
       const gifs = results.data.data;
       let domString = '';
-      domString += `<img src="${gifs[0].url}"/>`;
-      utils.printToDom('gifContainer', domString);
-      console.error('results', gifs[0], inputGif);
+      domString += `<img src="${gifs[0].images.original.url}"/>`;
+      utils.printToDom('gifID', domString);
     })
     .catch((error) => console.error('error', error));
-  const addGifToObject = messageData.getMessages();
-  const newGif = {
-    gif: '',
-  };
-  addGifToObject.push(newGif);
 };
 
 const buildNavbar = () => {
@@ -51,6 +45,7 @@ const buildNavbar = () => {
           message: $('#message-field').val(),
           timeStamp: moment().format('MMMM Do YYYY, h:mm a'),
           userId: userData.getSelectedUser(),
+          gif: $('#getInput').val(),
         };
         messages.push(newMessage);
         $('form').trigger('reset');
