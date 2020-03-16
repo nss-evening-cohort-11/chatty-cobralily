@@ -17,6 +17,11 @@ const requestGifs = () => {
       console.error('results', gifs[0], inputGif);
     })
     .catch((error) => console.error('error', error));
+  const addGifToObject = messageData.getMessages();
+  const newGif = {
+    gif: '',
+  };
+  addGifToObject.push(newGif);
 };
 
 const buildNavbar = () => {

@@ -12,6 +12,7 @@ const messageBuilder = () => {
     domString += userList.createUserList(text.userId);
     domString += '<div>';
     domString += `<p class='fontIncrease standard'>${text.message}</p>`;
+    domString += `<img src='${text.gif}'/>`;
     domString += `<p>${text.timeStamp}</p>`;
     domString += '</div>';
     domString += '</div>';
