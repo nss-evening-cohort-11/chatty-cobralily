@@ -1,6 +1,5 @@
 import utils from '../../helpers/utils';
 
-
 const settings = () => {
   let domString = '';
   domString += '<div id="settingsContainer" class="btn-group bg-dark float-right m-2">';
@@ -48,6 +47,8 @@ const settings = () => {
     $('.message').removeClass('bg-white');
     $('.message').css('background-color', 'slategrey');
     $('.message').css('color', 'white');
+    $('#addGif').addClass('btn-danger');
+    $('#addGif').removeClass('btn-primary');
   };
   const lightTheme = () => {
     $('body').css('background-color', '');
@@ -79,6 +80,8 @@ const settings = () => {
     $('button').css('color', '');
     $('.message').addClass('bg-white');
     $('.message').css('color', '');
+    $('#addGif').addClass('btn-primary');
+    $('#addGif').removeClass('btn-danger');
   };
 
   $('#largeText').click(fontIncrease);
