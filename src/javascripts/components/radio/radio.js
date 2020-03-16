@@ -11,6 +11,7 @@ const buildRadioButtons = () => {
   let domString = '';
   allUsers.forEach((user) => {
     domString += '<div class="form-check form-check-inline userRadio">';
+    domString += `<img class="userPhoto" src="${user.photo}">`;
     domString += `<input class="form-check-input userRadio" type="radio" name="exampleRadios" id="${user.id}">`;
     domString += `<label class="form-check-label" for="${user.id}">${user.name}</label>`;
     domString += '</div>';

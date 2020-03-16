@@ -1,16 +1,16 @@
 import utils from '../../helpers/utils';
 
 const fontIncrease = () => {
-  $('.fontIncrease').css({ 'font-size': '200%' });
+  $('body').css({ 'font-size': '200%' });
 };
 const font = () => {
-  $('.standard').css({ 'font-size': '' });
+  $('body').css({ 'font-size': '' });
 };
 
 const settings = () => {
   let domString = '';
-  domString += '<div class="btn-group bg-light float-right m-2">';
-  domString += '<button type="button" class="btn btn-outline-success dropdown-toggle px-5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Settings</button>';
+  domString += '<div id="settingsContainer" class="btn-group bg-light float-right m-2">';
+  domString += '<button type="button" id="themeSelectorBtns" class="btn btn-outline-success dropdown-toggle px-5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Settings</button>';
   domString += '<div class="dropdown-menu ml-3">';
   domString += '<a class="dropdown-item" id="largeText" href="#">Increase Text</a>';
   domString += '<a class="dropdown-item" id="standardText" href="#">Standard Text</a>';
@@ -25,15 +25,21 @@ const settings = () => {
 $(document).ready(() => {
   $('#dark-mode').click(() => {
     $('body').css('background-color', 'black');
-    $('a').css('background-color', 'black');
     $('a').css('color', 'white');
-    $('form').css('background-color', 'black');
     $('form').css('color', 'white');
-    $('nav').css('background-color', 'black');
+    $('nav').removeClass('navbar-light');
+    $('nav').removeClass('bg-light');
+    $('nav').addClass('navbar-dark');
+    $('nav').addClass('bg-dark');
     $('nav').css('color', 'white');
-    $('#settings').css('background-color', 'black');
-    $('div').css('background-color', 'black');
-    $('div').css('color', 'white');
+    $('#settings').removeClass('bg-light');
+    $('#settings').addClass('bg-dark');
+    $('#userRadioBtnContainer').addClass('bg-dark');
+    $('label').css('color', 'white');
+    $('.dropdown-menu').css('background-color', 'black');
+    $('.dropdown-item').css('color', 'white');
+    // $('div').css('background-color', 'black');
+    // $('div').css('color', 'white');
     $('col').css('background-color', 'black');
     $('col').css('color', 'white');
     $('col').css('border-color', 'black');
@@ -50,7 +56,15 @@ $(document).ready(() => {
     $('a').css('color', '');
     $('form').css('background-color', '');
     $('form').css('color', '');
-    $('#settings').css('background-color', '');
+    $('nav').removeClass('navbar-dark');
+    $('nav').removeClass('bg-dark');
+    $('nav').addClass('navbar-light');
+    $('nav').addClass('bg-light');
+    $('#settings').removeClass('bg-dark');
+    $('#settings').addClass('bg-light');
+    $('#userRadioBtnContainer').removeClass('bg-dark');
+    $('#userRadioBtnContainer').addClass('bg-light');
+    $('.dropdown-item').css('color', 'black');
     $('div').css('background-color', '');
     $('div').css('color', '');
     $('col').css('background-color', '');
@@ -62,4 +76,7 @@ $(document).ready(() => {
     $('border').css('color', '');
   });
 });
-export default { settings };
+
+const getButtons = () => settings;
+
+export default { settings, getButtons };
