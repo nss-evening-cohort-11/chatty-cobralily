@@ -1,11 +1,12 @@
 #userRadioBtnContainer{
   display: flex;
   justify-content: space-around;
-  height: 40px;
+  height: 100px;
   background-color: #f8f9fa;
 }
 
 .userPhoto{
   width: 60px;
   margin: 20px;
+  border-radius: 50%;
 }
