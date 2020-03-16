@@ -31,7 +31,7 @@ const buildNavbar = () => {
     domString += '<input class="form-control w-75 mx-auto form-control-lg" type="text" id="message-field" placeholder="Enter message" aria-label="Search">';
     domString += '</form>';
     domString += '<input class="form-control" id="gifInput" placeholder="Add Gif"></input>';
-    domString += '<button class="btn btn-outline-success btn" id="addGif">Add Gif</button>';
+    domString += '<button class="btn btn-primary ml-5" id="addGif">Add Gif</button>';
     domString += '<button class="btn btn-primary btn-lg ml-5" id="clear-all-button">Clear All Messages</button>';
     domString += '</nav>';
     domString += '</div>';
