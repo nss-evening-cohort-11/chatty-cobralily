@@ -27,7 +27,7 @@ This project explored our knowledge of using ES6 modules, getter and setter meth
 ![gif-screen](./screenshots/gif-screen.png)
 
 ## Creators
-[Davis Lindell](https://github.com/delindell)
-[Beth Nielsen](https://github.com/bethh56)
-[Monique Bass](https://github.com/Nikababy01)
-[Zac Crumpton](https://github.com/ZacCrumpton)
+* [Davis Lindell](https://github.com/delindell)
+* [Beth Nielsen](https://github.com/bethh56)
+* [Monique Bass](https://github.com/Nikababy01)
+* [Zac Crumpton](https://github.com/ZacCrumpton)
