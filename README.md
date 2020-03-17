@@ -16,3 +16,6 @@ This project explored our knowledge of using ES6 modules, getter and setter meth
 1. In your browser go to to `http://localhost:9999`
 
 ## ScreenShot
+![light-mode](./screenshots/lightmode.png)
+![dark-mode](./screenshots/dark-mode.png)
+![gif-screen](./screenshots/gif-screen.png)
