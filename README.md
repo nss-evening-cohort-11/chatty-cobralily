@@ -6,6 +6,12 @@ In this second group project we created a messaging app where users can add and 
 
 This project explored our knowledge of using ES6 modules, getter and setter methods, JQuery methods, and SASS, along with everything else we have learned in class up to this point.
 
+## Technologies Used
+* HTML 5
+* CSS3
+* SCSS
+* Javascript
+
 ## How to run
 1. Clone down this repo
 
@@ -19,3 +25,9 @@ This project explored our knowledge of using ES6 modules, getter and setter meth
 ![light-mode](./screenshots/light-mode.png)
 ![dark-mode](./screenshots/dark-mode.png)
 ![gif-screen](./screenshots/gif-screen.png)
+
+## Creators
+[Davis Lindell](https://github.com/delindell)
+[Beth Nielsen](https://github.com/bethh56)
+[Monique Bass](https://github.com/Nikababy01)
+[Zac Crumpton](https://github.com/ZacCrumpton)
